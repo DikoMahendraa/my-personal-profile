@@ -1,6 +1,4 @@
-import rehypePrism from '@mapbox/rehype-prism'
-import nextMDX from '@next/mdx'
-import remarkGfm from 'remark-gfm'
+import { withSentryConfig } from '@sentry/nextjs'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -47,12 +45,14 @@ const nextConfig = {
   },
 }
 
-const withMDX = nextMDX({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypePrism],
+export default withSentryConfig(nextConfig, {
+  sourcemaps: {
+    disable: true,
   },
-})
+  org: 'HiCoco',
+  project: 'javascript-nextjs',
 
-export default withMDX(nextConfig)
+  authToken: process.env.NEXT_PUBLIC_SENTRY_AUTH_TOKEN,
+  hideSourceMaps: true,
+  silent: false,
+})

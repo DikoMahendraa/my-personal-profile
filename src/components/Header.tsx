@@ -1,7 +1,7 @@
 'use client'
 
 import { useTheme } from 'next-themes'
-import { Menu, Moon, Sun } from 'lucide-react'
+import { Moon, Home, Sun, Blocks, Bot } from 'lucide-react'
 
 import { usePathname } from 'next/navigation'
 import { memo, useCallback, useMemo } from 'react'
@@ -12,13 +12,16 @@ import { motion } from 'framer-motion'
 const navbar = [
   {
     href: '/',
+    icon: <Home />,
     name: 'Profile',
   },
   {
+    icon: <Blocks />,
     href: '/portofolio',
     name: 'Portofolio',
   },
   {
+    icon: <Bot />,
     href: '/assistant',
     name: 'Assistant',
   },
@@ -66,40 +69,18 @@ const Header = () => {
       <div className="layout flex items-center justify-between py-4">
         <div className="flex items-center">
           <HeaderItem pathname={pathname} />
-          <div className="dropdown dropdown-hover lg:hidden flex">
-            <button
-              tabIndex={0}
-              className="btn btn-ghost btn-circle text-gray-800 dark:text-white"
-            >
-              <Menu />
-            </button>
-
-            <ul
-              tabIndex={0}
-              className="dropdown-content z-[1] menu py-2 shadow dark:bg-gray-800 bg-white rounded-box w-[10rem]"
-            >
-              {navbar?.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className={`relative flex items-center text-base hover:text-red-500 dark:text-gray-400 ${pathname === item.href && 'dark:!text-cyan-300 font-semibold'}`}
-                  >
-                    {item.name}
-
-                    {pathname === item.href && (
-                      <motion.span
-                        className="absolute right-0 left-24 h-px rounded-full from-primary-dark-soft bg-gradient-to-r dark:from-cyan-300/50  dark:bg-unset"
-                        layoutId="navbar-desktop-mobile"
-                        transition={{
-                          type: 'tween',
-                          duration: 0.25,
-                        }}
-                      />
-                    )}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="lg:hidden flex w-full fixed bottom-0 py-3 justify-center gap-12 rounded-t-lg border border-b-0 border-cyan-500 dark:bg-primary-dark bg-gray-200 left-0">
+            {navbar?.map((item) => (
+              <div key={item.name}>
+                <Link
+                  href={item.href}
+                  className={`relative flex items-center flex-col text-xs dark:text-gray-400 ${pathname === item.href && 'dark:text-cyan-300 text-cyan-500 font-semibold'}`}
+                >
+                  {item.icon}
+                  <span className="mt-1">{item.name}</span>
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
 

@@ -48,6 +48,7 @@ const PortfolioDetailPage = () => {
               className="relative w-full rounded-lg overflow-hidden"
             >
               <Image
+                draggable={false}
                 src={imageSrc}
                 alt={`portfolio-image-${lastPathname}-${index}`}
                 priority

@@ -7,7 +7,7 @@ import { frontendTools } from '@/constants/assistant'
 
 export default function CardAssistant() {
   return (
-    <div className="grid gap-4 mt-4">
+    <div className="grid gap-4 mt-4 min-h-[100vh]">
       {frontendTools.map((item, index) => (
         <motion.div
           key={index}
@@ -16,7 +16,7 @@ export default function CardAssistant() {
           exit={{ opacity: 0, x: 20 }}
           transition={{ delay: index * 0.1 }}
         >
-          <p className=" lg:text-lg text-base mb-2 lg:mt-6 mt-4">
+          <p className=" lg:text-lg text-cyan-400 text-base mb-2 lg:mt-6 mt-4">
             {item.title}
           </p>
 

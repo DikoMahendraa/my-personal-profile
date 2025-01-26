@@ -3,7 +3,7 @@ export const experiences = {
   company: [
     {
       name: 'PT. Bank Rakyat Indonesia, Tbk.',
-      position: 'Frontend Engineer',
+      position: 'Freelance Frontend Engineer',
       time: 'Juny 2024 - December 2024',
       country: 'Jakarta, Indonesia',
       techonology:
@@ -56,7 +56,7 @@ export const experiences = {
     },
     {
       name: 'PT. Kaldu Sari Nabati',
-      position: 'Frontend Engineer',
+      position: 'Freelance Frontend Engineer',
       techonology:
         'Git, NextJS, Typescript, i18n, React Query, React Hooks Form',
       title_tech_used: 'Technology & Tools used:',

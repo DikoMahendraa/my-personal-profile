@@ -11,6 +11,7 @@ const Profile = () => {
       <div className="flex gap-4 items-center mb-6">
         <div className="relative lg:block w-[15rem] h-[15rem] hidden overflow-hidden border-4 border-cyan-500/30 rounded-xl">
           <Image
+            draggable={false}
             alt="image-profile"
             src="/me.jpg"
             fill
@@ -59,15 +60,19 @@ const Profile = () => {
       </div>
       <div className="lg:text-base text-sm dark:text-gray-300">
         <p className="lg:max-w-[90%]">
-          I am web developer with ± 4 years of experience using NextJs, React Js
-          and also React Native. interested in learning new things, used to
-          working under pressure, working well with team, used to working
-          remotely and ready to adjust skills according to company needs.
+          🔭 I’m currently looking for Fullstack Developer prefer as Frontend.{' '}
+          <br />
+          🤝 I’m looking for help with ChatGPT, Docs, Claude.ai, DeepSeek.{' '}
+          <br />
+          🌱 I’m currently learning - Backend Python/Flask/FasAPI and NestJs{' '}
+          <br /> ⚡ Fun fact - I like cat.
         </p>
-        <p className="mt-4 lg:max-w-[80%]">
-          I continually explore new technologies and tools to improve my
-          development process, while keeping up with the latest trends and best
-          practices.
+        <p className="mt-2">
+          {"I'm"} a seasoned Frontend Developer with 5 years of experience,
+          specializing in Python, JavaScript and TypeScript. I love transforming
+          ideas into interactive digital realities. My journey has equipped me
+          with the skills to create user-friendly web applications that
+          seamlessly blend design with functionality.
         </p>
       </div>
     </div>

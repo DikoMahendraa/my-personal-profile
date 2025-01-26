@@ -10,6 +10,10 @@ export const frontendTools = [
         name: 'TypeScript',
         url: 'https://www.typescriptlang.org/',
       },
+      {
+        name: 'Python',
+        url: 'https://www.python.org/',
+      },
     ],
   },
   {
@@ -34,6 +38,14 @@ export const frontendTools = [
       {
         name: 'React Native',
         url: 'https://reactnative.dev/',
+      },
+      {
+        name: 'FastAPI',
+        url: 'https://fastapi.tiangolo.com/',
+      },
+      {
+        name: 'ExpressJs',
+        url: 'https://expressjs.com/',
       },
     ],
   },
@@ -81,6 +93,10 @@ export const frontendTools = [
       {
         name: 'Jest',
         url: 'https://jestjs.io/',
+      },
+      {
+        name: 'React Testing Library',
+        url: 'https://testing-library.com/docs/react-testing-library/intro/',
       },
       {
         name: 'Cypress',
@@ -131,6 +147,10 @@ export const frontendTools = [
     tools: [
       {
         name: 'React Hooks Form',
+        url: 'https://react-hook-form.com/',
+      },
+      {
+        name: 'Yup',
         url: 'https://react-hook-form.com/',
       },
       {
@@ -232,20 +252,34 @@ export const frontendTools = [
         url: 'https://lucide.dev/icons/',
       },
       {
-        name: 'Gemini',
-        url: 'https://gemini.google.com/',
-      },
-      {
-        name: 'ChatGPT',
-        url: 'https://openai.com/chatgpt',
-      },
-      {
         name: 'i18n - UI language',
         url: 'https://www.i18n.com/',
       },
       {
         name: 'JSDoc',
         url: 'https://jsdoc.app/about-getting-started',
+      },
+    ],
+  },
+
+  {
+    title: 'AI Tools',
+    tools: [
+      {
+        name: 'Gemini',
+        url: 'https://gemini.google.com/',
+      },
+      {
+        name: 'Copilot',
+        url: 'https://openai.com/chatgpt',
+      },
+      {
+        name: 'Claude.ai',
+        url: 'https://openai.com/chatgpt',
+      },
+      {
+        name: 'DeepSeek',
+        url: 'https://openai.com/chatgpt',
       },
     ],
   },

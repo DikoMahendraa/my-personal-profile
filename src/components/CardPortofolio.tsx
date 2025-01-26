@@ -24,6 +24,7 @@ const CardPortofolio = (props: Readonly<CardPortfolioProps>) => {
       <h2 className="text-base font-semibold capitalize p-4">{props.name}</h2>
       <div className="relative aspect-video w-full">
         <Image
+          draggable={false}
           alt="image-profile"
           src={props.images}
           fill
