@@ -1,7 +1,7 @@
 'use client'
 
 import { useTheme } from 'next-themes'
-import { Moon, Home, Sun, Blocks, Bot } from 'lucide-react'
+import { Moon, Home, Sun, Blocks, Bot, Notebook } from 'lucide-react'
 
 import { usePathname } from 'next/navigation'
 import { memo, useCallback, useMemo } from 'react'
@@ -25,6 +25,11 @@ const navbar = [
     href: '/assistant',
     name: 'Assistant',
   },
+  {
+    icon: <Notebook />,
+    href: 'https://coco-blog.vercel.app/',
+    name: 'Notes',
+  },
 ]
 
 const HeaderItem: React.FC<{ pathname: string }> = ({ pathname }) => {
@@ -32,7 +37,8 @@ const HeaderItem: React.FC<{ pathname: string }> = ({ pathname }) => {
     <div key={item.name} className="py-4 mr-6 lg:block hidden">
       <Link
         href={item.href}
-        className={`relative dark:text-gray-400 dark:hover:text-cyan-600/80 ${pathname === item.href && 'dark:!text-cyan-300 font-semibold'}`}
+        target={item.name === 'Notes' ? '_blank' : ''}
+        className={`relative dark:text-gray-400 dark:hover:text-cyan-600/80 ${item.name === 'Notes' ? 'hover:bg-cyan-500 bg-cyan-500/25 px-6 py-2 rounded-lg !text-white' : ''} ${pathname === item.href && 'dark:!text-cyan-300 font-semibold'}`}
       >
         {item.name}
 
