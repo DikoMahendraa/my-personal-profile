@@ -1,6 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import ScrollProgress from '@/components/ScrollProgress'
+import { useScroll, useSpring, motion } from 'framer-motion'
 
 type P = {
   className?: string
@@ -8,15 +9,24 @@ type P = {
 
 export const MainLayout = (props: React.PropsWithChildren<P>) => {
   const styles = ['layout min-h-[100vh]', props.className].join(' ')
+  const { scrollYProgress } = useScroll()
+
+  // Smooth spring animation for scroll progress
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  })
 
   return (
     <motion.main
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 20 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
       className={styles}
     >
+      <ScrollProgress scaleX={scaleX} />
       {props.children}
     </motion.main>
   )
