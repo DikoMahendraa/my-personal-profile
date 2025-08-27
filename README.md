@@ -35,7 +35,7 @@ src
 Clone the project
 
 ```bash
-  git clone https://github.com/DikoMahendraa/personal-profile
+  git clone https://github.com/DikoMahendraa/my-personal-profile
 ```
 
 Go to the project directory
