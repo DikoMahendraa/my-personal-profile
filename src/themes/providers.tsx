@@ -7,5 +7,9 @@ export function Providers({
 }: Readonly<{
   children: React.ReactNode | React.ReactElement
 }>) {
-  return <ThemeProvider attribute="class">{children}</ThemeProvider>
+  return (
+    <ThemeProvider defaultTheme="dark" forcedTheme="dark" attribute="class">
+      {children}
+    </ThemeProvider>
+  )
 }

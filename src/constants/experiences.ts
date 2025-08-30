@@ -2,6 +2,24 @@ export const experiences = {
   title_experience: 'Experiences',
   company: [
     {
+      name: 'Amanahfy.Ltd',
+      position: 'Fulltime Frontend Engineer',
+      time: 'February 2024 - Present',
+      country: 'London Area, United Kingdom',
+      techonology:
+        'Git, NextJS, ReactJs, React Native, Typescript, TailwindCSS, Payment Gateway (Paypal, NMI, Stripe), React Query, React Hooks Form, Expo, NativeWind.',
+      title_tech_used: 'Technology & Tools used:',
+      description: [
+        `Migrated the frontend architecture from React JavaScript to the latest Next.js with TypeScript, applying the Atomic Design pattern to enable widget customization.`,
+        `Resolved critical bugs in the payment gateway integration for donation features.`,
+        `Implemented Storybook in the Next.js project to document components and accelerate frontend development.`,
+        `Designed and defined the technology stack for building Amanahfy’s white-label application from scratch using React Native Expo, integrated with NativeWind.`,
+        `Collaborated with designers to review Figma UI designs, providing feedback on relevance and feasibility.`,
+        `Improved mobile user experience by addressing iOS-specific issues, such as preventing unwanted zooming on form fields and ensuring cross-platform compatibility.`,
+        `Developed a shareable checkout page to enhance user experience, enabling seamless campaign sharing across social media (Instagram Stories/Posts/Reels) with a single click, while ensuring proper SEO for dynamic images, titles, descriptions, and metadata.`,
+      ],
+    },
+    {
       name: 'PT. Bank Rakyat Indonesia, Tbk.',
       position: 'Freelance Frontend Engineer',
       time: 'Juny 2024 - December 2024',

@@ -5,7 +5,7 @@ Hi, welcome to my personal profile.
 ## Tech
 
 - [Shadcn/ui](https://ui.shadcn.com/)
-- [NextJs/app dir](https://nextjs.org/docs/app)
+- [NextTs/app dir](https://nextjs.org/docs/app)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Framer motion](https://www.framer.com/motion/)
 - [Pre commit](https://typicode.github.io/husky/get-started.html)

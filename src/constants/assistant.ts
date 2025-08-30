@@ -108,6 +108,10 @@ export const frontendTools = [
     title: 'Development Tools',
     tools: [
       {
+        name: 'Cursor AI (vibes coding)',
+        url: 'https://cursor.com/',
+      },
+      {
         name: 'Visual Studio Code',
         url: 'https://code.visualstudio.com/',
       },
