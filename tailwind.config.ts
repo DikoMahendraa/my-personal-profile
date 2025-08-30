@@ -33,8 +33,8 @@ const config: Config = {
   darkMode: 'class',
   plugins: [require('daisyui')],
   daisyui: {
-    themes: ['light', 'dark'],
-    darkTheme: false,
+    themes: ['dark'],
+    darkTheme: true,
   },
 }
 export default config

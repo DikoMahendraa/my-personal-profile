@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import Image from 'next/image'
-import { AtSign, Github, Phone } from 'lucide-react'
+import { AtSign, Github, NotebookPen, Phone } from 'lucide-react'
 
 import ButtonDownload from './ButtonDownload'
 import Link from 'next/link'
@@ -35,6 +35,16 @@ const Profile = () => {
               082384898030
             </a>
           </p>
+          <p className="flex items-center lg:text-base text-gray-700 dark:text-white hover:!text-cyan-500 text-sm gap-2 my-2">
+            <NotebookPen size={18} />
+            <a
+              target="_blank"
+              href="https://diko-dev99.medium.com/"
+              className="dark:text-white text-gray-700 hover:!text-cyan-500 "
+            >
+              my writings on Medium
+            </a>
+          </p>
           <p className="flex w-min items-center hover:!text-cyan-500 dark:text-white lg:text-base text-sm gap-2 mt-2 mb-4">
             <AtSign size={18} />
             <a
@@ -64,8 +74,8 @@ const Profile = () => {
           <br />
           🤝 I’m looking for help with ChatGPT, Docs, Claude.ai, DeepSeek.{' '}
           <br />
-          🌱 I’m currently learning - Backend Python/Flask/FasAPI and NestJs{' '}
-          <br /> ⚡ Fun fact - I like cat.
+          🌱 I’m currently learning - How to optimizing and increase performance
+          on a website <br /> ⚡ Fun fact - I like cat.
         </p>
         <p className="mt-2">
           {"I'm"} a seasoned Frontend Developer with 5 years of experience,

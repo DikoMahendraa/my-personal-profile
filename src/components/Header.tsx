@@ -1,10 +1,9 @@
 'use client'
 
-import { useTheme } from 'next-themes'
-import { Moon, Home, Sun, Blocks, Bot, Notebook } from 'lucide-react'
+import { Home, Blocks, Bot } from 'lucide-react'
 
 import { usePathname } from 'next/navigation'
-import { memo, useCallback, useMemo } from 'react'
+import { memo } from 'react'
 import Link from 'next/link'
 
 import { motion } from 'framer-motion'
@@ -25,11 +24,11 @@ const navbar = [
     href: '/assistant',
     name: 'Assistant',
   },
-  {
-    icon: <Notebook />,
-    href: 'https://coco-blog.vercel.app/',
-    name: 'Notes',
-  },
+  // {
+  //   icon: <Notebook />,
+  //   href: 'https://coco-blog.vercel.app/',
+  //   name: 'Notes',
+  // },
 ]
 
 const HeaderItem: React.FC<{ pathname: string }> = ({ pathname }) => {
@@ -59,20 +58,23 @@ const HeaderItem: React.FC<{ pathname: string }> = ({ pathname }) => {
 
 const Header = () => {
   const pathname = usePathname()
-  const { theme, setTheme } = useTheme()
+  {
+    /* TODO: hide for temporary and make it dark as default */
+  }
+  // const { theme, setTheme } = useTheme()
 
-  const switchDarkMode = useCallback(() => {
-    theme === 'light' ? setTheme('dark') : setTheme('light')
-  }, [setTheme, theme])
+  // const switchDarkMode = useCallback(() => {
+  //   theme === 'light' ? setTheme('dark') : setTheme('light')
+  // }, [setTheme, theme])
 
-  const iconMode = useMemo(
-    () => (theme === 'light' ? <Moon /> : <Sun className="text-white" />),
-    [theme]
-  )
+  // const iconMode = useMemo(
+  //   () => (theme === 'light' ? <Moon /> : <Sun className="text-white" />),
+  //   [theme]
+  // )
 
   return (
     <nav className="bg-white dark:bg-primary-dark sticky top-0 w-full z-10">
-      <div className="layout flex items-center justify-between py-4">
+      <div className="layout flex items-center justify-end py-4">
         <div className="flex items-center">
           <HeaderItem pathname={pathname} />
           <div className="lg:hidden flex w-full fixed bottom-0 py-3 justify-center gap-12 rounded-t-lg border border-b-0 border-cyan-500 dark:bg-primary-dark bg-gray-200 left-0">
@@ -90,7 +92,8 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="flex items-center">
+        {/* TODO: hide for temporary and make it dark as default */}
+        {/* <div className="flex items-center">
           <div className="flex items-center space-x-2 ml-4">
             <button
               className="text-sm italic capitalize cursor-pointer"
@@ -99,7 +102,7 @@ const Header = () => {
               {iconMode}
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </nav>
   )
