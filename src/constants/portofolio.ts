@@ -121,6 +121,88 @@ export const portofolio = {
     {
       layout_type: 'desktop',
       type: 'company',
+      assets: 8,
+      images: '/portofolio/company/pwa-wtf.png',
+      name: 'PWA WTF',
+      todo: [
+        'Developed and maintained the frontend of a web application using React, Next.js, and TypeScript.',
+        'Implemented responsive design using Tailwind CSS, ensuring optimal viewing across desktop, tablet, and mobile devices.',
+      ],
+      role: 'Frontend Engineer',
+      tech: [
+        'NextJs',
+        'Typescript',
+        'TailwindCSS',
+        'Framer motion'
+      ],
+      link: 'https://bri-corpsite.dev-kjt.id/web/kartukredit',
+      available: true,
+      about: `This landing page is designed to be highly dynamic, with all its content managed within Drupal, a content management system. This setup allows the owner to easily customize the layout, text, and images on the landing page as desired, without needing to rewrite any code each time they want to update the content. This is an incredibly innovative concept as it enables companies to save costs by simplifying content management. My role was to ensure the page's performance by optimizing clean, reusable, and type-safe code. Additionally, I leveraged the powerful features of Next.js, including server and client components, to maximize efficiency and scalability.`,
+    },
+    {
+      layout_type: 'desktop',
+      type: 'company',
+      assets: 5,
+      images: '/portofolio/company/shigan.png',
+      name: 'Shigan Electronics',
+      todo: [
+        'Developed and maintained the frontend of a web application using React, Next.js, and TypeScript.',
+        'Implemented responsive design using Tailwind CSS, ensuring optimal viewing across desktop, tablet, and mobile devices.',
+      ],
+      role: 'Frontend Engineer',
+      tech: [
+        'NextJs',
+        'Typescript',
+        'TailwindCSS',
+        'Framer motion',
+      ],
+      link: 'https://bri-corpsite.dev-kjt.id/web/kartukredit',
+      available: true,
+      about: `This landing page is designed to be highly dynamic, with all its content managed within Drupal, a content management system. This setup allows the owner to easily customize the layout, text, and images on the landing page as desired, without needing to rewrite any code each time they want to update the content. This is an incredibly innovative concept as it enables companies to save costs by simplifying content management. My role was to ensure the page's performance by optimizing clean, reusable, and type-safe code. Additionally, I leveraged the powerful features of Next.js, including server and client components, to maximize efficiency and scalability.`,
+    },
+    {
+      layout_type: 'desktop',
+      type: 'company',
+      assets: 5,
+      images: '/portofolio/company/bestprover.png',
+      name: 'Bestprover',
+      todo: [
+        '',
+      ],
+      role: 'Frontend Engineer',
+      tech: [
+        'NextJs',
+        'Typescript',
+        'TailwindCSS',
+        'Framer motion',
+      ],
+      link: 'https://bri-corpsite.dev-kjt.id/web/kartukredit',
+      available: true,
+      about: `This landing page is designed to be highly dynamic, with all its content managed within Drupal, a content management system. This setup allows the owner to easily customize the layout, text, and images on the landing page as desired, without needing to rewrite any code each time they want to update the content. This is an incredibly innovative concept as it enables companies to save costs by simplifying content management. My role was to ensure the page's performance by optimizing clean, reusable, and type-safe code. Additionally, I leveraged the powerful features of Next.js, including server and client components, to maximize efficiency and scalability.`,
+    },
+    {
+      layout_type: 'desktop',
+      type: 'company',
+      assets: 3,
+      images: '/portofolio/company/charity-dashboard.png',
+      name: 'Charity Dashboard',
+      todo: [''],
+      role: 'Frontend Engineer',
+      tech: [
+        'NextJs',
+        'Typescript',
+        'TailwindCSS',
+        'React Query',
+      ],
+      link: 'https://amanahfy.com',
+      available: true,
+      about: `Amanahfy is a platform that allows users to create and manage their own campaigns. It is a platform that allows users to create and manage their own campaigns. It is a platform that allows users to create and manage their own campaigns. It is a platform that allows users to create and manage their own campaigns. It is a platform that allows users to create and manage their own campaigns. It is a platform that allows users to create and manage their own campaigns.`,
+    },
+
+
+    {
+      layout_type: 'desktop',
+      type: 'company',
       assets: 3,
       images: '/portofolio/company/main-website.png',
       name: 'BRI Main Website',
@@ -146,6 +228,7 @@ export const portofolio = {
       available: true,
       about: `This landing page is designed to be highly dynamic, with all its content managed within Drupal, a content management system. This setup allows the owner to easily customize the layout, text, and images on the landing page as desired, without needing to rewrite any code each time they want to update the content. This is an incredibly innovative concept as it enables companies to save costs by simplifying content management. My role was to ensure the page's performance by optimizing clean, reusable, and type-safe code. Additionally, I leveraged the powerful features of Next.js, including server and client components, to maximize efficiency and scalability.`,
     },
+
     {
       layout_type: 'desktop',
       type: 'company',

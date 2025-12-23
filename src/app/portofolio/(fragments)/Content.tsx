@@ -100,7 +100,7 @@ const Content = () => {
         <div className="relative lg:w-auto w-full justify-end flex">
           <button
             onClick={() => setShowFilter((v) => !v)}
-            className="comic-border comic-shadow-sm bg-white px-3 py-2 rounded-md flex items-center gap-2 font-extrabold text-sm"
+            className="comic-border w-[8rem] comic-shadow-sm bg-white px-3 py-2 rounded-md flex justify-between items-center gap-2 font-extrabold text-sm"
           >
             {filter ? filter : 'Filter'}
             <ChevronDown
@@ -114,7 +114,7 @@ const Content = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               className="
-                absolute right-0 mt-3
+                absolute right-0 mt-12
                 bg-white
                 comic-border
                 comic-shadow

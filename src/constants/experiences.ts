@@ -2,6 +2,19 @@ export const experiences = {
   title_experience: 'Experiences',
   company: [
     {
+      name: 'Upwork (Top Rated)',
+      position: 'Freelance Frontend Engineer',
+      time: 'February 2024 - Present',
+      country: 'Remote, Indonesia',
+      description: [
+        `Developed and maintained the frontend of a web application using React, Next.js, and TypeScript.`,
+        `Implemented responsive design using Tailwind CSS, ensuring optimal viewing across desktop, tablet, and mobile devices.`,
+      ],
+      techonology:
+        'Git, NextJS, ReactJs, React Native, Typescript, TailwindCSS, Payment Gateway (Paypal, NMI, Stripe), React Query, React Hooks Form, Expo, NativeWind.',
+      title_tech_used: 'Technology & Tools used:',
+    },
+    {
       name: 'Amanahfy.Ltd',
       position: 'Fulltime Frontend Engineer',
       time: 'February 2024 - Present',

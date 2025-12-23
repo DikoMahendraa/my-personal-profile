@@ -31,7 +31,7 @@ const CardPortofolio = (props: Readonly<CardPortfolioProps>) => {
           src={props.images}
           fill
           priority
-          className="rounded-md"
+          className="rounded-md object-cover"
         />
       </div>
     </div>

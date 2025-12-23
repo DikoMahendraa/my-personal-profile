@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import Image from 'next/image'
-import { AtSign, Github, NotebookPen, Phone } from 'lucide-react'
+import { AtSign, Briefcase, Github, NotebookPen, Phone } from 'lucide-react'
 import Link from 'next/link'
 import ButtonDownload from './ButtonDownload'
 
@@ -48,6 +48,13 @@ const Profile = () => {
                   <Phone size={18} />
                   <a target="_blank" href="https://wa.me/082384898030">
                     082384898030
+                  </a>
+                </p>
+
+                <p className="flex items-center gap-2 hover:translate-x-1 transition">
+                  <Briefcase size={18} />
+                  <a target="_blank" href="https://www.upwork.com/freelancers/~01836508b4dec75fcd?mp_source=share">
+                    Upwork (Top Rated)
                   </a>
                 </p>
 
@@ -101,9 +108,7 @@ const Profile = () => {
             </p>
 
             <p>
-              Frontend Developer with 5+ years of experience in JavaScript,
-              TypeScript, and Python. I turn ideas into bold, interactive web
-              experiences with a focus on usability and performance.
+            I am a highly skilled Full Stack Developer with a strong focus on Frontend Engineering. With extensive experience in building dynamic and responsive web applications, I am passionate about creating seamless user experiences and delivering high-quality solutions.
             </p>
           </div>
         </div>
