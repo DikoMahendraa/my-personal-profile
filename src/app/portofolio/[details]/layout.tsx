@@ -27,15 +27,16 @@ export async function generateMetadata({
 
   const portfolioName = portfolioItem.name
   // Strip HTML tags and limit description length
-  const portfolioDescription = portfolioItem.about
-    ?.replace(/<[^>]*>/g, '')
-    .replace(/\s+/g, ' ')
-    .trim()
-    .substring(0, 160) || `Check out ${portfolioName} - ${portfolioItem.role}`
-  
+  const portfolioDescription =
+    portfolioItem.about
+      ?.replace(/<[^>]*>/g, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .substring(0, 160) || `Check out ${portfolioName} - ${portfolioItem.role}`
+
   const siteUrl = 'https://cocome.vercel.app'
   const portfolioUrl = `${siteUrl}/portofolio/${details}`
-  
+
   // Ensure image URL is absolute (required for social media platforms)
   const portfolioImagePath = portfolioItem.images || '/me.jpg'
   const portfolioImage = portfolioImagePath.startsWith('http')
@@ -77,4 +78,3 @@ export default function PortfolioDetailLayout({
 }) {
   return <>{children}</>
 }
-
