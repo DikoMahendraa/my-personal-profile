@@ -6,7 +6,7 @@ const NotFound = () => {
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="comic-panel p-10 text-center max-w-md w-full">
         {/* ICON */}
-        <div className="flex justify-center mb-6 text-cyan-300/70">
+        <div className="flex justify-center mb-6 text-black/70">
           <NotepadText size={96} strokeWidth={1.5} />
         </div>
 

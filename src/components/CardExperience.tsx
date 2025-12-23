@@ -48,7 +48,7 @@ const CardExperience = ({
         <div className="relative z-10">
           {/* Header */}
           <div className="lg:flex sm:flex justify-between items-start xs:grid sm:grid-cols-2 gap-4">
-            <div className="xs:col-span-2">
+            <div className="xs:col-span-2 comic-chip bg-yellow-100">
               <p className="text-lg lg:text-xl font-extrabold text-black flex items-center gap-2">
                 <Building />
                 {company}

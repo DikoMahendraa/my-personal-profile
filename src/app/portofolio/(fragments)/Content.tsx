@@ -4,7 +4,6 @@ import CardPortofolio from '@/components/CardPortofolio'
 import React, { useCallback, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { listFilterPortofolio, portofolio } from '@/constants/portofolio'
-import Image from 'next/image'
 import { ChevronDown, FolderGit2 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useAtom } from 'jotai'
@@ -87,6 +86,7 @@ const Content = () => {
                   font-extrabold
                   text-sm capitalize
                   comic-hover
+                  text-black
                   ${active ? 'bg-yellow-300' : 'bg-white'}
                 `}
               >
@@ -134,17 +134,12 @@ const Content = () => {
                   className="
                     flex items-center gap-2
                     p-2 rounded-md
+                    text-black
                     cursor-pointer
                     font-semibold text-sm
                     hover:bg-yellow-100
                   "
                 >
-                  <Image
-                    src={item.icons}
-                    alt={item.name}
-                    width={16}
-                    height={16}
-                  />
                   {item.name.replace('js', '')}
                 </li>
               ))}
@@ -154,7 +149,7 @@ const Content = () => {
                   setFilter('')
                   setShowFilter(false)
                 }}
-                className="mt-2 w-full comic-border rounded-md py-1 text-xs font-extrabold bg-red-100"
+                className="mt-2 text-black w-full comic-border rounded-md py-1 text-xs font-extrabold bg-red-100"
               >
                 RESET
               </button>

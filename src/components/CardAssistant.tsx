@@ -18,7 +18,7 @@ export default function CardAssistant() {
           className="comic-panel comic-hover p-5"
         >
           {/* 🏷 SECTION TITLE */}
-          <p className="text-lg font-extrabold tracking-wide mb-4 text-cyan-300">
+          <p className="text-lg font-extrabold tracking-wide mb-4 text-black">
             {item.title}
           </p>
 

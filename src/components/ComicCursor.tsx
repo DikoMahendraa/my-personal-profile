@@ -123,13 +123,6 @@ export default function ComicCursor() {
           top: `${cursorPosition.y}px`,
         }}
       >
-        {isHovering && (
-          <>
-            <div className="comic-cursor-action-line comic-cursor-action-line-1"></div>
-            <div className="comic-cursor-action-line comic-cursor-action-line-2"></div>
-            <div className="comic-cursor-action-line comic-cursor-action-line-3"></div>
-          </>
-        )}
       </div>
 
       {/* Cursor trail */}

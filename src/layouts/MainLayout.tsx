@@ -26,6 +26,7 @@ export const MainLayout = (props: React.PropsWithChildren<P>) => {
       transition={{ duration: 0.5 }}
       className={styles}
     >
+      <div className="absolute inset-0 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:12px_12px] opacity-10 pointer-events-none" />
       <ScrollProgress scaleX={scaleX} />
       {props.children}
     </motion.main>

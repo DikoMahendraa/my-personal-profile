@@ -15,10 +15,10 @@ const AssistantPage = () => {
       {/* 📰 COMIC PAGE HEADER */}
       {/* ===================== */}
       <div className="comic-panel comic-halftone my-6 p-6">
-        <p className="text-2xl font-extrabold tracking-wide">
+        <p className="text-2xl text-black font-extrabold tracking-wide">
           🤖 TOOLS & ASSISTANTS
         </p>
-        <p className="mt-2 text-sm font-semibold opacity-80">
+        <p className="mt-2 text-sm font-semibold text-black">
           Tools and all the sources that I use
         </p>
       </div>

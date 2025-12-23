@@ -140,7 +140,7 @@
 
   .comic-title {
     @apply
-      text-cyan-300
+      text-black
       font-extrabold
       uppercase
       tracking-wide
@@ -180,7 +180,7 @@
       duration-150
       hover:-translate-y-1
       hover:bg-cyan-300/30
-      dark:hover:text-cyan-300;
+      dark:hover:text-black;
   }
 
   /* ===================== */
@@ -189,8 +189,8 @@
 
   .comic-cursor {
     position: fixed;
-    width: 28px;
-    height: 28px;
+    width: 20px;
+    height: 20px;
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%);
@@ -248,7 +248,7 @@
   }
 
   .comic-cursor-hover {
-    transform: translate(-50%, -50%) scale(1.6);
+    transform: translate(-50%, -50%);
   }
 
   .comic-cursor-hover::before {
@@ -273,38 +273,6 @@
         0 0 0 3px #fff,
         0 0 25px rgba(251, 191, 36, 1);
     }
-  }
-
-  /* Action lines for hover effect */
-  .comic-cursor-action-line {
-    position: absolute;
-    background: #000;
-    transform-origin: center bottom;
-    left: 50%;
-  }
-
-  .comic-cursor-action-line-1 {
-    width: 3px;
-    height: 20px;
-    top: -25px;
-    transform: translateX(-50%) rotate(15deg);
-    animation: comic-shake-1 0.3s ease-in-out infinite;
-  }
-
-  .comic-cursor-action-line-2 {
-    width: 3px;
-    height: 20px;
-    top: -25px;
-    transform: translateX(-50%) rotate(-15deg);
-    animation: comic-shake-2 0.3s ease-in-out infinite 0.1s;
-  }
-
-  .comic-cursor-action-line-3 {
-    width: 3px;
-    height: 15px;
-    top: -30px;
-    transform: translateX(-50%) rotate(0deg);
-    animation: comic-shake-3 0.3s ease-in-out infinite 0.2s;
   }
 
   @keyframes comic-shake-1 {

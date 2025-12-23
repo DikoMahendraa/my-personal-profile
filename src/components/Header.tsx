@@ -89,7 +89,7 @@ const Header = () => {
                   className={`
                     flex flex-col items-center text-xs font-extrabold
                     transition
-                    ${isActive ? 'text-black' : 'text-gray-500'}
+                    ${isActive ? 'text-black' : 'text-black'}
                   `}
                 >
                   <span

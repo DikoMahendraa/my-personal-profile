@@ -54,7 +54,7 @@ const Profile = () => {
                 <p className="flex items-center gap-2 hover:translate-x-1 transition">
                   <NotebookPen size={18} />
                   <a target="_blank" href="https://diko-dev99.medium.com/">
-                    Medium Articles
+                    Medium
                   </a>
                 </p>
 
@@ -68,7 +68,7 @@ const Profile = () => {
 
               {/* Actions */}
               <div className="flex gap-4 mt-6">
-                <ButtonDownload />
+                <ButtonDownload text='Download Resume' />
 
                 <Link
                   target="_blank"
