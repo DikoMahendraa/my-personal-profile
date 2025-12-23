@@ -56,9 +56,7 @@ const Content = () => {
 
   const onPreviewDetail = useCallback(
     (item: TDetailPortofolio) => {
-      router.push(
-        `/portofolio/${item.name.toLowerCase().replace(/ /g, '-')}`
-      )
+      router.push(`/portofolio/${item.name.toLowerCase().replace(/ /g, '-')}`)
       setDetailPortofolio(item)
     },
     [router, setDetailPortofolio]
@@ -200,9 +198,7 @@ const Content = () => {
           className="comic-panel comic-halftone text-center py-10"
         >
           <FolderGit2 size={48} className="mx-auto mb-4" />
-          <p className="font-extrabold text-sm">
-            NO PORTFOLIO FOUND
-          </p>
+          <p className="font-extrabold text-sm">NO PORTFOLIO FOUND</p>
         </motion.div>
       )}
     </motion.section>

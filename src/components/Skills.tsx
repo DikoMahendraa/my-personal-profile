@@ -97,15 +97,9 @@ const Skills = () => {
         items={skills.programming}
       />
 
-      <SectionDescription
-        title={skills.title_tools}
-        items={skills.tools}
-      />
+      <SectionDescription title={skills.title_tools} items={skills.tools} />
 
-      <SectionDescription
-        title={skills.title_library}
-        items={skills.library}
-      />
+      <SectionDescription title={skills.title_library} items={skills.library} />
     </section>
   )
 }

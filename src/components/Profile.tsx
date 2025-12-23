@@ -39,9 +39,7 @@ const Profile = () => {
             <div>
               <p className="mb-4 text-black lg:text-5xl text-4xl font-extrabold leading-tight">
                 Hi! I’m <br />
-                <span className="uppercase text-red-600">
-                  Diko Mahendra
-                </span>
+                <span className="uppercase text-red-600">Diko Mahendra</span>
               </p>
 
               {/* Contacts */}
@@ -55,20 +53,14 @@ const Profile = () => {
 
                 <p className="flex items-center gap-2 hover:translate-x-1 transition">
                   <NotebookPen size={18} />
-                  <a
-                    target="_blank"
-                    href="https://diko-dev99.medium.com/"
-                  >
+                  <a target="_blank" href="https://diko-dev99.medium.com/">
                     Medium Articles
                   </a>
                 </p>
 
                 <p className="flex items-center gap-2 hover:translate-x-1 transition">
                   <AtSign size={18} />
-                  <a
-                    target="_blank"
-                    href="mailto:diko.dev99@gmail.com"
-                  >
+                  <a target="_blank" href="mailto:diko.dev99@gmail.com">
                     diko.dev99@gmail.com
                   </a>
                 </p>
@@ -105,8 +97,7 @@ const Profile = () => {
               🤝 Learning with ChatGPT, Docs, Claude & DeepSeek
               <br />
               🌱 Improving website performance
-              <br />
-              ⚡ Fun fact: Cat person 🐈
+              <br />⚡ Fun fact: Cat person 🐈
             </p>
 
             <p>

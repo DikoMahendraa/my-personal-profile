@@ -25,21 +25,35 @@ export default function ComicCursor() {
 
     const checkIsInteractive = (element: HTMLElement | null): boolean => {
       if (!element) return false
-      
+
       const tagName = element.tagName.toLowerCase()
-      const isInteractiveTag = ['a', 'button', 'input', 'textarea', 'select'].includes(tagName)
+      const isInteractiveTag = [
+        'a',
+        'button',
+        'input',
+        'textarea',
+        'select',
+      ].includes(tagName)
       const hasInteractiveRole = element.getAttribute('role') === 'button'
-      const hasInteractiveClass = element.classList.contains('comic-hover') ||
+      const hasInteractiveClass =
+        element.classList.contains('comic-hover') ||
         element.classList.contains('comic-button') ||
         element.classList.contains('comic-chip')
-      const hasInteractiveParent = element.closest('a, button, input, textarea, select, .comic-hover, .comic-button, .comic-chip, [role="button"]')
-      
-      return isInteractiveTag || hasInteractiveRole || hasInteractiveClass || !!hasInteractiveParent
+      const hasInteractiveParent = element.closest(
+        'a, button, input, textarea, select, .comic-hover, .comic-button, .comic-chip, [role="button"]'
+      )
+
+      return (
+        isInteractiveTag ||
+        hasInteractiveRole ||
+        hasInteractiveClass ||
+        !!hasInteractiveParent
+      )
     }
 
     const updateCursor = (e: MouseEvent) => {
       const now = Date.now()
-      
+
       // Throttle updates for better performance
       if (now - lastUpdate < 16) return // ~60fps
       lastUpdate = now
@@ -59,12 +73,12 @@ export default function ComicCursor() {
 
       setTrail((prev) => {
         const updated = [...prev, newTrailPoint]
-        
+
         // Keep only recent trail points (last 300ms) and limit length
         const filtered = updated
           .filter((point) => now - point.timestamp < 300)
           .slice(-12) // Limit to 12 trail points
-        
+
         return filtered
       })
     }
@@ -146,4 +160,3 @@ export default function ComicCursor() {
     </>
   )
 }
-

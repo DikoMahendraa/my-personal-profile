@@ -28,9 +28,7 @@ const PortofolioPage = () => {
         "
       >
         {/* Label */}
-        <span className="comic-label bg-red-600 text-white">
-          WARNING!
-        </span>
+        <span className="comic-label bg-red-600 text-white">WARNING!</span>
 
         {/* Halftone */}
         <div className="absolute inset-0 comic-halftone pointer-events-none rounded-xl" />
@@ -42,8 +40,8 @@ const PortofolioPage = () => {
 
         <p className="relative z-10 text-black text-sm lg:text-base font-semibold italic">
           <b>Heads up:</b> Some projects may no longer be available due to
-          missing documentation, privacy restrictions, or services that are
-          no longer running.
+          missing documentation, privacy restrictions, or services that are no
+          longer running.
         </p>
       </div>
 
