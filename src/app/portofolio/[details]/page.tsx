@@ -1,7 +1,7 @@
 'use client'
 
 import { MainLayout } from '@/layouts/MainLayout'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, ExternalLink } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -22,91 +22,104 @@ const PortfolioDetailPage = () => {
 
   return (
     <MainLayout className="layout">
-      <Link href="/portofolio">
-        <ArrowLeft className="text-white dark:text-cyan-300" />
+      {/* ⬅️ BACK */}
+      <Link
+        href="/portofolio"
+        className="inline-flex items-center gap-2 mt-12 comic-chip mb-6 w-fit"
+      >
+        <ArrowLeft size={16} />
+        Back to Portfolio
       </Link>
 
-      <div className="my-6">
-        <p className="dark:text-white lg:text-3xl text-2xl font-bold uppercase text-gray-800">
+      {/* 🏷 TITLE */}
+      <div className="comic-panel p-6 mb-8">
+        <p className="lg:text-3xl text-2xl font-extrabold uppercase tracking-wide text-gray-800 dark:text-white">
           {lastPathname.split('-').join(' ')}
         </p>
       </div>
 
+      {/* 🖼️ SCREENSHOTS */}
       <div
-        className={`grid h-full gap-6 mt-6 ${!isDesktop ? 'lg:grid-cols-2 grid-cols-1' : 'grid-cols-1'}`}
+        className={`grid gap-6 ${
+          !isDesktop ? 'lg:grid-cols-2 grid-cols-1' : 'grid-cols-1'
+        }`}
       >
         {[...Array(_detailPortofolio.assets)].map((_, index) => {
           const imageSrc = `/portofolio/${_detailPortofolio.type}/${lastPathname}/${index + 1}.png`
 
           return (
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              transition={{ delay: Number(`0.${index}`), times: 0 }}
               key={index}
-              className="relative w-full rounded-lg overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.08 }}
+              className="comic-panel overflow-hidden"
             >
               <Image
                 draggable={false}
                 src={imageSrc}
                 alt={`portfolio-image-${lastPathname}-${index}`}
                 priority
-                layout="responsive" // Ensures full-width with height auto-adjusted based on aspect ratio
-                width={1920} // Example width; adjust based on your design
-                height={1080} // Example height; aspect ratio will be maintained
-                className="rounded-lg bg-white"
+                width={1920}
+                height={1080}
+                className="bg-white"
               />
             </motion.div>
           )
         })}
       </div>
-      <div className="my-6">
-        <p className="dark:text-cyan-300 lg:text-lg text-sm font-semibold capitalize lg:my-6 my-2">
-          about the application
-        </p>
-        <div
-          className="dark:text-gray-400 lg:text-base text-xs"
-          dangerouslySetInnerHTML={{
-            __html: _detailPortofolio.about as TrustedHTML,
-          }}
-        />
-        <button
-          onClick={
-            _detailPortofolio.available
-              ? () => onViewDetails(_detailPortofolio.link)
-              : () => ({})
-          }
-          className={`btn btn-ghost mt-4 
-            ${
-              !_detailPortofolio.available
-                ? 'disabled:text-gray-400 disabled:bg-gray-600'
-                : 'bg-cyan-600 text-white'
+
+      {/* 📘 DETAILS */}
+      <div className="mt-10 space-y-8">
+        {/* ABOUT */}
+        <section className="comic-panel p-6">
+          <p className="comic-title">About the Application</p>
+          <div
+            className="text-sm lg:text-base text-gray-600 dark:text-gray-300"
+            dangerouslySetInnerHTML={{
+              __html: _detailPortofolio.about as TrustedHTML,
+            }}
+          />
+
+          <button
+            onClick={
+              _detailPortofolio.available
+                ? () => onViewDetails(_detailPortofolio.link)
+                : () => ({})
+            }
+            disabled={!_detailPortofolio.available}
+            className={`comic-button mt-6 ${
+              !_detailPortofolio.available && 'opacity-50 cursor-not-allowed'
             }`}
-          disabled={!_detailPortofolio.available}
-        >
-          Visit Site
-        </button>
-        <p className="dark:text-cyan-300 lg:text-lg text-sm font-semibold capitalize lg:my-6 my-2">
-          What I worked on
-        </p>
-        <ul className="list-disc lg:text-base text-xs dark:text-gray-400">
-          {_detailPortofolio?.todo?.map((item) => (
-            <li className="mb-4" key={item}>
-              {item}
-            </li>
-          ))}
-        </ul>
-        <p className="dark:text-cyan-300 lg:text-lg text-sm font-semibold capitalize lg:my-6 my-2">
-          technology used
-        </p>
-        <ul className="list-disc lg:text-base text-xs dark:text-gray-400">
-          {_detailPortofolio?.tech?.map((item) => (
-            <li className="capitalize" key={item}>
-              {item}
-            </li>
-          ))}
-        </ul>
+          >
+            <ExternalLink size={16} />
+            Visit Site
+          </button>
+        </section>
+
+        {/* WORK DONE */}
+        <section className="comic-panel p-6">
+          <p className="comic-title">What I Worked On</p>
+          <div className="grid sm:grid-cols-2 gap-3 mt-4">
+            {_detailPortofolio?.todo?.map((item) => (
+              <div key={item} className="comic-chip text-left">
+                {item}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* TECHNOLOGY */}
+        <section className="comic-panel p-6">
+          <p className="comic-title">Technology Used</p>
+          <div className="flex flex-wrap gap-2 mt-4">
+            {_detailPortofolio?.tech?.map((item) => (
+              <span key={item} className="comic-chip capitalize">
+                {item}
+              </span>
+            ))}
+          </div>
+        </section>
       </div>
     </MainLayout>
   )

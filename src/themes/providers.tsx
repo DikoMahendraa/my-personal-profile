@@ -8,7 +8,7 @@ export function Providers({
   children: React.ReactNode | React.ReactElement
 }>) {
   return (
-    <ThemeProvider defaultTheme="dark" forcedTheme="dark" attribute="class">
+    <ThemeProvider defaultTheme="light" forcedTheme="light" attribute="class">
       {children}
     </ThemeProvider>
   )
