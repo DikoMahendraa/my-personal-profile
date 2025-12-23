@@ -15,7 +15,7 @@
   }
 
   .layout {
-    @apply mx-auto max-w-2xl 3xl:max-w-4xl w-[86%];
+    @apply mx-auto lg:max-w-5xl w-full px-4 lg:px-0;
   }
 }
 

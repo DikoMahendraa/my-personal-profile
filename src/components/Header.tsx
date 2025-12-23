@@ -57,14 +57,14 @@ const Header = () => {
       className="
         sticky top-0 z-20
         bg-white
-        border-b-[4px] border-black
+        lg:border-b-[4px] border-black
         shadow-[0_6px_0_0_#000]
       "
     >
       {/* Halftone */}
       <div className="absolute inset-0 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px] opacity-[0.05] pointer-events-none" />
 
-      <div className="layout relative flex items-center justify-end py-4">
+      <div className="layout relative flex items-center justify-end lg:py-4 py-0">
         <HeaderItem pathname={pathname} />
 
         {/* Mobile Comic Bottom Nav */}
@@ -73,7 +73,6 @@ const Header = () => {
             lg:hidden
             fixed bottom-0 left-0 w-full
             bg-white
-            border-t-[4px] border-black
             shadow-[0_-6px_0_0_#000]
             py-3
           "

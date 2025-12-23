@@ -6,10 +6,10 @@ import ButtonDownload from './ButtonDownload'
 
 const Profile = () => {
   return (
-    <div className="w-full flex justify-center mt-12 px-4">
+    <div className="w-full flex justify-center mt-12 lg:px-4">
       <div
         className="
-          w-full max-w-5xl
+          w-full lg:max-w-5xl max-w-full
           bg-yellow-100 dark:bg-yellow-300
           border-[4px] border-black
           rounded-xl
