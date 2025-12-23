@@ -68,7 +68,7 @@ const Profile = () => {
 
               {/* Actions */}
               <div className="flex gap-4 mt-6">
-                <ButtonDownload text='Download Resume' />
+                <ButtonDownload text="Download Resume" />
 
                 <Link
                   target="_blank"

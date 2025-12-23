@@ -122,8 +122,7 @@ export default function ComicCursor() {
           left: `${cursorPosition.x}px`,
           top: `${cursorPosition.y}px`,
         }}
-      >
-      </div>
+      ></div>
 
       {/* Cursor trail */}
       <div className="comic-cursor-trail-container">
