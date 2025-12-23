@@ -11,12 +11,24 @@ export const metadata: Metadata = {
 const AssistantPage = () => {
   return (
     <MainLayout className="layout min-h-[100vh]">
-      <div className="my-6 gap-4 dark:text-gray-200">
-        <p className="text-xl font-semibold">
+      {/* ===================== */}
+      {/* 📰 COMIC PAGE HEADER */}
+      {/* ===================== */}
+      <div className="comic-panel comic-halftone my-6 p-6">
+        <p className="text-2xl text-black font-extrabold tracking-wide">
+          🤖 TOOLS & ASSISTANTS
+        </p>
+        <p className="mt-2 text-sm font-semibold text-black">
           Tools and all the sources that I use
         </p>
       </div>
-      <CardAssistant />
+
+      {/* ===================== */}
+      {/* 📦 COMIC CONTENT */}
+      {/* ===================== */}
+      <div className="comic-panel comic-hover p-4">
+        <CardAssistant />
+      </div>
     </MainLayout>
   )
 }

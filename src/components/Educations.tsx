@@ -20,34 +20,67 @@ const educations = {
 }
 
 const EducationItem = () => {
-  return educations.schools.map((item) => (
-    <div key={item.name} className="lg:col-span-1 col-span-2 mb-6">
-      <p className="lg:text-lg text-base font-semibold dark:text-cyan-500 flex lg:items-center gap-2">
-        <GraduationCap /> {item.name}
-      </p>
-      <p className="lg:text-base text-sm font-normal text-gray-500 dark:text-gray-400">
-        {item.major}
-      </p>
-      <p className="lg:text-base text-sm font-normal text-gray-400 dark:text-gray-300 lg:mt-6 mt-3 flex items-center gap-2">
-        <CalendarDays size={18} /> {item.since}
-      </p>
-      <p className="lg:text-base text-sm font-normal text-gray-400 dark:text-gray-300 flex items-center gap-2 mt-2">
-        <MapPin size={18} /> {item.place}
-      </p>
+  return educations.schools.map((item, index) => (
+    <div
+      key={item.name}
+      className="
+        relative
+        col-span-2 lg:col-span-1
+        bg-white
+        border-[4px] border-black
+        rounded-xl
+        shadow-[6px_6px_0_0_#000]
+        p-5
+        transition
+        hover:translate-x-1 hover:translate-y-1 hover:shadow-none
+      "
+    >
+      {/* Panel number */}
+      <span className="absolute -top-4 -left-4 bg-black text-white text-xs font-extrabold px-3 py-1 border-[3px] border-black">
+        EDU #{index + 1}
+      </span>
+
+      {/* Halftone */}
+      <div className="absolute inset-0 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:14px_14px] opacity-[0.06] pointer-events-none rounded-xl" />
+
+      <div className="relative z-10">
+        <p className="lg:text-lg text-base font-extrabold text-black flex items-center gap-2">
+          <GraduationCap />
+          {item.name}
+        </p>
+
+        <p className="mt-1 text-sm lg:text-base font-semibold text-gray-800">
+          {item.major}
+        </p>
+
+        {/* Divider */}
+        <div className="my-4 border-t-[3px] border-black" />
+
+        <p className="text-sm lg:text-base font-medium text-gray-700 flex items-center gap-2">
+          <CalendarDays size={18} />
+          {item.since}
+        </p>
+
+        <p className="mt-2 text-sm lg:text-base font-medium text-gray-700 flex items-center gap-2">
+          <MapPin size={18} />
+          {item.place}
+        </p>
+      </div>
     </div>
   ))
 }
 
 const Educations = () => {
   return (
-    <div id="education" className="border-t border-gray-50 mt-8 pt-4">
-      <h1 className="lg:text-2xl text-lg font-semibold text-gray-600 dark:text-white">
-        {educations.title_education}
+    <section id="education" className="mt-10">
+      <h1 className="lg:text-2xl text-lg font-extrabold mb-6 text-black">
+        🎓 {educations.title_education}
       </h1>
-      <div className="grid grid-cols-2 mt-4">
+
+      <div className="grid grid-cols-2 gap-6">
         <EducationItem />
       </div>
-    </div>
+    </section>
   )
 }
 

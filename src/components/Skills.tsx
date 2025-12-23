@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-
 import { Code2 } from 'lucide-react'
 
 const skills = {
@@ -10,20 +9,18 @@ const skills = {
   programming: ['Javascript', 'Typescript'],
   library: [
     'React Js',
-    'Git',
     'React Native',
-    'Dart/Flutter',
+    'Dart / Flutter',
     'Next Js',
     'Firebase',
-    'Git',
     'TailwindCSS',
     'REST API',
     'Docker',
     'Google Cloud Platform (GCP)',
-    'Zod/Yup',
+    'Zod / Yup',
     'GraphQL',
-    'React Hooks Form',
-    'Tanstack Query',
+    'React Hook Form',
+    'TanStack Query',
     'E2E Automation (Cypress)',
     'Unit Test (RTL, Jest)',
     'Framer Motion',
@@ -38,36 +35,72 @@ const SectionDescription = ({
   title: string
   items: Array<string>
 }) => (
-  <div className="xs:col-span-2 mt-4">
-    <p className="mb-2 text-gray-800 lg:text-lg text-base font-semibold dark:text-cyan-500 flex items-center gap-2">
-      <Code2 size={16} /> {title}
-    </p>
-    <ul className="list-disc list-item ml-5">
-      {items.map((item) => (
-        <li
-          key={item}
-          className="text-gray-600 lg:text-base mb-1 text-sm dark:text-gray-300"
-        >
-          {item}
-        </li>
-      ))}
-    </ul>
+  <div
+    className="
+      relative
+      bg-white
+      border-[4px] border-black
+      rounded-xl
+      shadow-[6px_6px_0_0_#000]
+      p-5
+      mt-6
+      transition
+      hover:translate-x-1 hover:translate-y-1 hover:shadow-none
+    "
+  >
+    {/* Label */}
+    <span className="absolute -top-4 -left-4 bg-black text-white text-xs font-extrabold px-3 py-1 border-[3px] border-black">
+      SKILL
+    </span>
+
+    {/* Halftone */}
+    <div className="absolute inset-0 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:14px_14px] opacity-[0.06] pointer-events-none rounded-xl" />
+
+    <div className="relative z-10">
+      <p className="mb-3 text-black lg:text-lg text-base font-extrabold flex items-center gap-2">
+        <Code2 size={18} />
+        {title}
+      </p>
+
+      {/* Skill pills */}
+      <div className="flex flex-wrap gap-2">
+        {items.map((item) => (
+          <span
+            key={item}
+            className="
+              bg-yellow-100
+              border-[3px] border-black
+              px-3 py-1
+              rounded-md
+              text-sm lg:text-base
+              font-semibold
+              shadow-[2px_2px_0_0_#000]
+            "
+          >
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
   </div>
 )
 
 const Skills = () => {
   return (
-    <div id="skills" className="border-t border-gray-50 mt-8 pt-4">
-      <h1 className="lg:text-2xl text-lg font-semibold text-gray-600 dark:text-white">
-        {skills.title_skills}
+    <section id="skills" className="mt-10">
+      <h1 className="lg:text-2xl text-lg font-extrabold text-black mb-4">
+        ⚡ {skills.title_skills}
       </h1>
+
       <SectionDescription
-        items={skills.programming}
         title={skills.title_programming}
+        items={skills.programming}
       />
-      <SectionDescription items={skills.tools} title={skills.title_tools} />
-      <SectionDescription items={skills.library} title={skills.title_library} />
-    </div>
+
+      <SectionDescription title={skills.title_tools} items={skills.tools} />
+
+      <SectionDescription title={skills.title_library} items={skills.library} />
+    </section>
   )
 }
 

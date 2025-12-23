@@ -1,89 +1,112 @@
 import React, { memo } from 'react'
 import Image from 'next/image'
 import { AtSign, Github, NotebookPen, Phone } from 'lucide-react'
-
-import ButtonDownload from './ButtonDownload'
 import Link from 'next/link'
+import ButtonDownload from './ButtonDownload'
 
 const Profile = () => {
   return (
-    <div className="w-full flex-col items-center mt-10">
-      <div className="flex gap-4 items-center mb-6">
-        <div className="relative lg:block w-[15rem] h-[15rem] hidden overflow-hidden border-4 border-cyan-500/30 rounded-xl">
-          <Image
-            draggable={false}
-            alt="image-profile"
-            src="/me.jpg"
-            fill
-            priority
-            className="object-cover"
-            sizes="(max-width: 768px) 7.5rem, 15rem"
-            quality={100}
-          />
-        </div>
-        <div>
-          <p className="dark:text-white mb-6 text-gray-700 lg:text-5xl text-4xl font-bold">
-            Hi, {`I'm`} <br /> <span className="capitalize">Diko Mahendra</span>
-          </p>
-          <p className="flex items-center w-min lg:text-base text-gray-700 dark:text-white hover:!text-cyan-500 text-sm gap-2">
-            <Phone size={18} />
-            <a
-              target="_blank"
-              href="https://wa.me/082384898030"
-              className="dark:text-white text-gray-700 hover:!text-cyan-500"
-            >
-              082384898030
-            </a>
-          </p>
-          <p className="flex items-center lg:text-base text-gray-700 dark:text-white hover:!text-cyan-500 text-sm gap-2 my-2">
-            <NotebookPen size={18} />
-            <a
-              target="_blank"
-              href="https://diko-dev99.medium.com/"
-              className="dark:text-white text-gray-700 hover:!text-cyan-500 "
-            >
-              my writings on Medium
-            </a>
-          </p>
-          <p className="flex w-min items-center hover:!text-cyan-500 dark:text-white lg:text-base text-sm gap-2 mt-2 mb-4">
-            <AtSign size={18} />
-            <a
-              target="_blank"
-              href="mailto:diko.dev99@gmail.com"
-              className="dark:text-white text-gray-700 hover:!text-cyan-500 "
-            >
-              diko.dev99@gmail.com
-            </a>
-          </p>
-          <div className="flex gap-4">
-            <ButtonDownload text="Resume" />
+    <div className="w-full flex justify-center mt-12 lg:px-4">
+      <div
+        className="
+          w-full lg:max-w-5xl max-w-full
+          bg-yellow-100 dark:bg-yellow-300
+          border-[4px] border-black
+          rounded-xl
+          shadow-[8px_8px_0_0_#000]
+          p-6 lg:p-10
+          relative
+        "
+      >
+        {/* Halftone background */}
+        <div className="absolute inset-0 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:12px_12px] opacity-10 pointer-events-none" />
 
-            <Link
-              target="_blank"
-              href="https://github.com/DikoMahendraa"
-              className="btn bg-cyan-800/35 border-none hover:bg-cyan-700"
-            >
-              <Github className="dark:text-cyan-300" />
-            </Link>
+        {/* Content */}
+        <div className="relative z-10">
+          <div className="flex gap-6 items-center mb-8">
+            {/* Avatar */}
+            <div className="relative hidden lg:block w-[14rem] h-[14rem] overflow-hidden border-[4px] border-black rounded-lg bg-white">
+              <Image
+                src="/me.jpg"
+                alt="image-profile"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+
+            {/* Intro */}
+            <div>
+              <p className="mb-4 text-black lg:text-5xl text-4xl font-extrabold leading-tight">
+                Hi! I’m <br />
+                <span className="uppercase text-red-600">Diko Mahendra</span>
+              </p>
+
+              {/* Contacts */}
+              <div className="space-y-2 text-black font-medium">
+                <p className="flex items-center gap-2 hover:translate-x-1 transition">
+                  <Phone size={18} />
+                  <a target="_blank" href="https://wa.me/082384898030">
+                    082384898030
+                  </a>
+                </p>
+
+                <p className="flex items-center gap-2 hover:translate-x-1 transition">
+                  <NotebookPen size={18} />
+                  <a target="_blank" href="https://diko-dev99.medium.com/">
+                    Medium
+                  </a>
+                </p>
+
+                <p className="flex items-center gap-2 hover:translate-x-1 transition">
+                  <AtSign size={18} />
+                  <a target="_blank" href="mailto:diko.dev99@gmail.com">
+                    diko.dev99@gmail.com
+                  </a>
+                </p>
+              </div>
+
+              {/* Actions */}
+              <div className="flex gap-4 mt-6">
+                <ButtonDownload text="Download Resume" />
+
+                <Link
+                  target="_blank"
+                  href="https://github.com/DikoMahendraa"
+                  className="
+                    bg-black text-white
+                    border-[3px] border-black
+                    px-4 py-2
+                    rounded-md
+                    shadow-[4px_4px_0_0_#000]
+                    hover:translate-x-1 hover:translate-y-1 hover:shadow-none
+                    transition
+                  "
+                >
+                  <Github />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Description */}
+          <div className="text-black text-sm lg:text-base space-y-3 font-medium">
+            <p>
+              🔭 Looking for Fullstack Developer (Frontend Focus)
+              <br />
+              🤝 Learning with ChatGPT, Docs, Claude & DeepSeek
+              <br />
+              🌱 Improving website performance
+              <br />⚡ Fun fact: Cat person 🐈
+            </p>
+
+            <p>
+              Frontend Developer with 5+ years of experience in JavaScript,
+              TypeScript, and Python. I turn ideas into bold, interactive web
+              experiences with a focus on usability and performance.
+            </p>
           </div>
         </div>
-      </div>
-      <div className="lg:text-base text-sm dark:text-gray-300">
-        <p className="lg:max-w-[90%]">
-          🔭 I’m currently looking for Fullstack Developer prefer as Frontend.{' '}
-          <br />
-          🤝 I’m looking for help with ChatGPT, Docs, Claude.ai, DeepSeek.{' '}
-          <br />
-          🌱 I’m currently learning - How to optimizing and increase performance
-          on a website <br /> ⚡ Fun fact - I like cat.
-        </p>
-        <p className="mt-2">
-          {"I'm"} a seasoned Frontend Developer with 5 years of experience,
-          specializing in Python, JavaScript and TypeScript. I love transforming
-          ideas into interactive digital realities. My journey has equipped me
-          with the skills to create user-friendly web applications that
-          seamlessly blend design with functionality.
-        </p>
       </div>
     </div>
   )

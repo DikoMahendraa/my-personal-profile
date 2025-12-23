@@ -7,28 +7,34 @@ import { frontendTools } from '@/constants/assistant'
 
 export default function CardAssistant() {
   return (
-    <div className="grid gap-4 mt-4 min-h-[100vh]">
+    <div className="grid gap-8 mt-6">
       {frontendTools.map((item, index) => (
         <motion.div
           key={index}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
           transition={{ delay: index * 0.1 }}
+          className="comic-panel comic-hover p-5"
         >
-          <p className=" lg:text-lg text-cyan-400 text-base mb-2 lg:mt-6 mt-4">
+          {/* 🏷 SECTION TITLE */}
+          <p className="text-lg font-extrabold tracking-wide mb-4 text-black">
             {item.title}
           </p>
 
-          <ul className="list-disc ml-6">
+          {/* 🧩 GRID TOOLS */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {item.tools?.map((tool) => (
-              <li key={tool.name} className="text-gray-400 hover:text-cyan-300">
-                <Link target="_blank" href={tool.url}>
-                  {tool.name}
-                </Link>
-              </li>
+              <Link
+                key={tool.name}
+                href={tool.url}
+                target="_blank"
+                className="comic-chip"
+              >
+                {tool.name}
+              </Link>
             ))}
-          </ul>
+          </div>
         </motion.div>
       ))}
     </div>

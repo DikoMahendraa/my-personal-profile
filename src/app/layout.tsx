@@ -1,6 +1,7 @@
 import { Providers } from '@/themes/providers'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import ComicCursor from '@/components/ComicCursor'
 
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { Poppins } from 'next/font/google'
@@ -23,6 +24,7 @@ export default function RootLayout({
       <head />
       <body className="h-full overscroll-none">
         <Providers>
+          <ComicCursor />
           <Header />
           {children}
           <Footer />

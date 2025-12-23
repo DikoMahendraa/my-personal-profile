@@ -3,27 +3,32 @@ import Link from 'next/link'
 
 const NotFound = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <div>
-        <div className="flex justify-center mb-4 dark:text-cyan-300/50">
-          <NotepadText size={100} />
+    <div className="min-h-screen flex items-center justify-center px-4">
+      <div className="comic-panel p-10 text-center max-w-md w-full">
+        {/* ICON */}
+        <div className="flex justify-center mb-6 text-black/70">
+          <NotepadText size={96} strokeWidth={1.5} />
         </div>
 
-        <h1 className="text-3xl font-semibold mb-2 text-center dark:text-cyan-300/50">
-          Page not found
+        {/* TITLE */}
+        <h1 className="text-3xl font-extrabold uppercase tracking-wide mb-3 text-gray-800 dark:text-white">
+          Page Not Found
         </h1>
 
-        <p className="text-lg text-center mb-4 dark:text-gray-200">
-          Oops ... <br /> {`You've`} visited the unwritten page!
+        {/* DESCRIPTION */}
+        <p className="text-base text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          Oops! <br />
+          You’ve stumbled upon an <b>unwritten comic panel</b>.
         </p>
 
-        <div className="flex justify-center">
-          <Link href="/" className="">
-            <span className="flex dark:text-cyan-300/45 dark:hover:text-cyan-300">
-              <ArrowLeft /> Back to Home
-            </span>
-          </Link>
-        </div>
+        {/* ACTION */}
+        <Link
+          href="/"
+          className="comic-button inline-flex justify-center mx-auto"
+        >
+          <ArrowLeft size={16} />
+          Back to Home
+        </Link>
       </div>
     </div>
   )

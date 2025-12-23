@@ -21,7 +21,9 @@ const CardPortofolio = (props: Readonly<CardPortfolioProps>) => {
       onClick={props.onPreview}
       className="rounded-md cursor-pointer hover:bg-gray-100/50 dark:hover:bg-gray-900/10"
     >
-      <h2 className="text-base font-semibold capitalize p-4">{props.name}</h2>
+      <h2 className="text-base font-semibold capitalize p-4 text-black">
+        {props.name}
+      </h2>
       <div className="relative aspect-video w-full">
         <Image
           draggable={false}
