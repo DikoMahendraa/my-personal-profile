@@ -53,7 +53,10 @@ const Profile = () => {
 
                 <p className="flex items-center gap-2 hover:translate-x-1 transition">
                   <Briefcase size={18} />
-                  <a target="_blank" href="https://www.upwork.com/freelancers/~01836508b4dec75fcd?mp_source=share">
+                  <a
+                    target="_blank"
+                    href="https://www.upwork.com/freelancers/~01836508b4dec75fcd?mp_source=share"
+                  >
                     Upwork (Top Rated)
                   </a>
                 </p>
@@ -108,7 +111,11 @@ const Profile = () => {
             </p>
 
             <p>
-            I am a highly skilled Full Stack Developer with a strong focus on Frontend Engineering. With extensive experience in building dynamic and responsive web applications, I am passionate about creating seamless user experiences and delivering high-quality solutions.
+              I am a highly skilled Full Stack Developer with a strong focus on
+              Frontend Engineering. With extensive experience in building
+              dynamic and responsive web applications, I am passionate about
+              creating seamless user experiences and delivering high-quality
+              solutions.
             </p>
           </div>
         </div>
