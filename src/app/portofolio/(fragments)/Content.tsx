@@ -70,9 +70,9 @@ const Content = () => {
       {/* ===================== */}
       {/* 🧭 COMIC FILTER BAR */}
       {/* ===================== */}
-      <div className="flex items-center justify-between py-6">
+      <div className="flex lg:flex-row flex-col lg:items-center items-start justify-between py-6">
         {/* Tabs */}
-        <div className="flex gap-3">
+        <div className="flex w-full lg:mb-0 mb-4 gap-3">
           {portofolio.tab.map((item) => {
             const active = tab === item
             return (
@@ -97,12 +97,12 @@ const Content = () => {
         </div>
 
         {/* Filter */}
-        <div className="relative">
+        <div className="relative lg:w-auto w-full justify-end flex">
           <button
             onClick={() => setShowFilter((v) => !v)}
             className="comic-border comic-shadow-sm bg-white px-3 py-2 rounded-md flex items-center gap-2 font-extrabold text-sm"
           >
-            FILTER
+            {filter ? filter : 'Filter'}
             <ChevronDown
               size={14}
               className={`transition ${showFilter ? 'rotate-180' : ''}`}
