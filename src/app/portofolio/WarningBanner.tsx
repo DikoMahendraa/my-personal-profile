@@ -26,4 +26,3 @@ const WarningBanner = () => {
 }
 
 export default WarningBanner
-
