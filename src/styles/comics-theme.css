@@ -1,0 +1,183 @@
+@layer components {
+  /* Comic-style borders */
+  .comic-border {
+    border: 4px solid #000;
+    box-shadow: 
+      8px 8px 0px 0px #000,
+      6px 6px 0px 0px #000,
+      4px 4px 0px 0px #000,
+      2px 2px 0px 0px #000;
+  }
+
+  .comic-border-thin {
+    border: 3px solid #000;
+    box-shadow: 
+      6px 6px 0px 0px #000,
+      4px 4px 0px 0px #000,
+      2px 2px 0px 0px #000;
+  }
+
+  .comic-border-thick {
+    border: 5px solid #000;
+    box-shadow: 
+      10px 10px 0px 0px #000,
+      8px 8px 0px 0px #000,
+      6px 6px 0px 0px #000,
+      4px 4px 0px 0px #000,
+      2px 2px 0px 0px #000;
+  }
+
+  /* Comic-style text */
+  .comic-text {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-shadow: 
+      2px 2px 0px #000,
+      1px 1px 0px #000;
+  }
+
+  .comic-text-outline {
+    -webkit-text-stroke: 2px #000;
+    text-stroke: 2px #000;
+    color: #fff;
+  }
+
+  /* Comic panel effect */
+  .comic-panel {
+    background: #fff;
+    border: 4px solid #000;
+    box-shadow: 
+      8px 8px 0px 0px #000,
+      inset 0 0 0 2px #fff;
+    position: relative;
+  }
+
+  .comic-panel::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(0, 0, 0, 0.05) 10px,
+      rgba(0, 0, 0, 0.05) 20px
+    );
+    z-index: -1;
+  }
+
+  /* Speech bubble */
+  .speech-bubble {
+    background: #fff;
+    border: 3px solid #000;
+    position: relative;
+    box-shadow: 4px 4px 0px 0px #000;
+  }
+
+  .speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top-color: #000;
+    border-bottom: 0;
+    margin-left: -15px;
+  }
+
+  .speech-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    border-top-color: #fff;
+    border-bottom: 0;
+    margin-left: -12px;
+    z-index: 1;
+  }
+
+  /* Comic button */
+  .comic-button {
+    background: #ffeb3b;
+    border: 3px solid #000;
+    box-shadow: 
+      4px 4px 0px 0px #000,
+      inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    transition: all 0.1s ease;
+    position: relative;
+  }
+
+  .comic-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 
+      2px 2px 0px 0px #000,
+      inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+  }
+
+  .comic-button:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+  }
+
+  /* Comic card */
+  .comic-card {
+    background: #fff;
+    border: 4px solid #000;
+    box-shadow: 
+      8px 8px 0px 0px #000,
+      inset 0 0 0 2px #fff;
+    transition: all 0.2s ease;
+  }
+
+  .comic-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 
+      12px 12px 0px 0px #000,
+      inset 0 0 0 2px #fff;
+  }
+
+  /* Comic background pattern */
+  .comic-bg {
+    background: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(0, 0, 0, 0.03) 10px,
+        rgba(0, 0, 0, 0.03) 20px
+      ),
+      linear-gradient(to bottom, #fff 0%, #f5f5f5 100%);
+  }
+
+  /* Comic highlight */
+  .comic-highlight {
+    background: #ffeb3b;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0px 0px #000;
+    padding: 2px 6px;
+    display: inline-block;
+  }
+
+  /* Comic badge */
+  .comic-badge {
+    background: #ff1744;
+    color: #fff;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0px 0px #000;
+    padding: 4px 8px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+}
+
