@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import Image from 'next/image'
-import { AtSign, Briefcase, Github, NotebookPen, Phone } from 'lucide-react'
+import { AtSign, Github, NotebookPen, Phone } from 'lucide-react'
 import Link from 'next/link'
 import ButtonDownload from './ButtonDownload'
 
@@ -51,7 +51,7 @@ const Profile = () => {
                   </a>
                 </p>
 
-                <p className="flex items-center gap-2 hover:translate-x-1 transition">
+                {/* <p className="flex items-center gap-2 hover:translate-x-1 transition">
                   <Briefcase size={18} />
                   <a
                     target="_blank"
@@ -59,7 +59,7 @@ const Profile = () => {
                   >
                     Upwork (Top Rated)
                   </a>
-                </p>
+                </p> */}
 
                 <p className="flex items-center gap-2 hover:translate-x-1 transition">
                   <NotebookPen size={18} />
